@@ -16,6 +16,12 @@
         .error { 
             color: red; 
         }
+        .submit {
+            border-radius: 4px;
+            color: white;
+            background-color: #008CBA;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
     </style> <!-- ini sebagai Tag penutup untuk menuliskan css dalam dokumen*/ -->
 </head> <!-- ini adalah struktur dalam membuat html -->
 <body> <!-- ini adalah struktur dalam membuat html -->
@@ -49,7 +55,7 @@
                         $('p.result').show(); // menampilkan nilai dari class result
                         $('p.result').text('Terima kasih telah memilih '+$('input:checked').attr("value")+' sebagai pasangan calon pemimpin Rumah Ceria 2020'); 
                     }
-                    event.preventDefault();
+                    event.preventDefault(); // ini sebgai pemicu pada elemren yang dipilijh
                 });
             });
         </script> <!--ini sebagai Tag penutup untuk menulisan javascript/jquery-->
