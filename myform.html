@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- ini adalah struktur dalam membuat dokumen pada html -->
+<html> <!-- ini adalah struktur dalam membuat html -->
+<head> <!-- ini adalah struktur dalam membuat html -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>  <!-- ini merupakan link javascript yang digunakan untuk menginport jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+    <title>05211940000082 - AISYAH ZAKIYA APTWORORA</title>  <!-- ini merupakan judul web -->
+    <meta charset="utf-8"> <!-- ini merupakan metadata --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ini berfurngsi agar ukuran tampilan web sesuai dengan ukuran device -->
+    <style> /* ini sebagai Tag pembuka untuk menuliskan css dalam dokumen*/
+        style.css
+        .infobox { 
+            margin-top: 15px; 
+        } 
+        .error { 
+            color: red; 
+        }
+    </style> <!-- ini sebagai Tag penutup untuk menuliskan css dalam dokumen*/ -->
+</head> <!-- ini adalah struktur dalam membuat html -->
+<body> <!-- ini adalah struktur dalam membuat html -->
+    <div class=" d-flex align-items-center justify-content-center "> <!-- ini dituliskan agar isi web berada di tengah*/ -->
+    <form> 
+        <p></p>
+        <h1> DAFTAR PASANGAN CALON PEMIMPIN RUMAH CERIA 2020 </h1>
+        <h5>TENTUKAN MASA DEPAN RUMAH CERIA MENDATANG!</h5>
+        <input type="radio" name="paslon" class="infobox" value="Adi Mulyadi - Deni Sumardi">Adi Mulyadi - Deni Sumardi <br> 
+        <input type="radio" name="paslon" class="infobox" value="Nur Anya - Bio Saturaga">Nur Anya - Bio Saturaga<br> 
+        <input type="radio" name="paslon" class="infobox" value="Egara Subeno - Viasel Anakara">Egara Subeno - Viasel Anakara <br> 
+            <p class="error"> Dilarang GOLPUT dalam Pemilu! </p> 
+            <p class="result"></p> 
+        <input class="submit" type="submit" value="Submit"> 
+    </form>
+    </div>
+        <script> // ini sebagai Tag pembuka untuk menulisan javascript/jquery
+            $(document).ready(function() {
+                $('.error').hide();   // digunakan untuk menyembunyikan terlebih dahulu class bernama error 
+                $('.submit').click(function(event){  // digunakan untuk meng-click pada class submmit 
+                    var amt=0;  // digunakan untuk menampung nilai variabel amt bernilai 0 
+                    var count=$('input:checked').length;  // digunakan untuk meng-check jumlah tombol radio yang dittekan lalu menyimpan nilainya pada variabel count//
+                    if(count==0)  // memeriksa kondisi jika nilai pada count bernilai 0 maka
+                    {
+                        $('p.result').hide();  // akan menyembunyikan nilai dari class result
+                        $('.error').show();  // dan akan menampilkan nilai dari class error
+                    }
+                    else // memeriksa kondisi ketika salah satu radio button dipilih maka akan:
+                    {
+                        $('.error').hide(); // menyembunyikan nilai dari class error
+                        $('p.result').show(); // menampilkan nilai dari class result
+                        $('p.result').text('Terima kasih telah memilih '+$('input:checked').attr("value")+' sebagai pasangan calon pemimpin Rumah Ceria 2020'); 
+                    }
+                    event.preventDefault();
+                });
+            });
+        </script> <!--ini sebagai Tag penutup untuk menulisan javascript/jquery-->
+
+</body> <!-- ini adalah struktur dalam membuat html -->
+        
+    
+</html> <!-- ini adalah struktur dalam membuat html -->
